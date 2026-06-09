@@ -1,6 +1,47 @@
-# SEPS: Semantic-enhanced Patch Slimming Framework for fine-grained cross-modal alignment
+<div align="center">
 
-We referred to the implementations of [LAPS](https://github.com/CrossmodalGroup/LAPS) and [D2S-VSE](https://github.com/liuyyy111/d2s-vse) to build up the repository. Our paper is at [here](https://arxiv.org/abs/2511.01390).
+# SEPS: Semantic-Enhanced Patch Slimming Framework for Fine-Grained Cross-Modal Alignment
+
+<p>
+  <a href="https://arxiv.org/abs/2511.01390"><img src="https://img.shields.io/badge/arXiv-2511.01390-b31b1b.svg" alt="arXiv"></a>
+  <img src="https://img.shields.io/badge/ICML-2026-4b44ce.svg" alt="ICML 2026">
+  <img src="https://img.shields.io/badge/Task-Image--Text%20Retrieval-0ea5e9.svg" alt="Image-Text Retrieval">
+  <img src="https://img.shields.io/badge/Framework-PyTorch-ee4c2c.svg" alt="PyTorch">
+</p>
+
+<p>
+  <b>Official PyTorch implementation of our ICML 2026 paper</b><br>
+  <i>Semantic-enhanced patch slimming for fine-grained cross-modal alignment.</i>
+</p>
+
+<p>
+  <a href="https://arxiv.org/abs/2511.01390">Paper</a> ·
+  <a href="#introduction">Introduction</a> ·
+  <a href="#training">Training</a> ·
+  <a href="#evaluation">Evaluation</a> ·
+  <a href="#performances">Results</a> ·
+  <a href="#citation">Citation</a>
+</p>
+
+</div>
+
+> [!IMPORTANT]
+> 🎉 **Our paper has been accepted to ICML 2026!**  
+> **SEPS** addresses semantic sparsity bias in fine-grained image-text retrieval by combining sparse captions with MLLM-generated dense semantics for more reliable patch selection and cross-modal matching.
+
+## 🔥 News
+
+- **[2026-06]** SEPS was accepted to **ICML 2026**. Thanks to the reviewers and area chairs for their valuable feedback!
+- **[2026-06]** We release the official code, training scripts, evaluation scripts, reproduced results, checkpoints, and logs.
+
+## ✨ Highlights
+
+- **Semantic Sparsity Bias.** We identify the mismatch between dense visual signals and sparse textual captions as a key bottleneck in fine-grained cross-modal alignment.
+- **Dual-Granularity Semantic Calibration.** We use MLLM-generated dense descriptions as holistic visual-linguistic anchors and combine them with sparse captions to guide robust patch slimming.
+- **Salience-Guided Metric Aggregation.** We reduce similarity dilution by emphasizing highly relevant patch-word correspondences instead of uniformly averaging all local matches.
+- **Strong empirical performance.** SEPS achieves state-of-the-art image-text retrieval results on **Flickr30K** and **MS-COCO** across multiple visual backbones, with particularly strong gains for text-to-image retrieval.
+
+This repository is built upon the excellent implementations of [LAPS](https://github.com/CrossmodalGroup/LAPS) and [D2S-VSE](https://github.com/liuyyy111/d2s-vse).
 
 
 ## Introduction
@@ -156,4 +197,20 @@ We provide the training logs, checkpoints, performances, and hyper-parameters.
 |MSCOCO-5K |Swin-224 | 71.9 | 86.0  | 66.8 | 92.2 | 506.1 |[Link](https://drive.google.com/drive/folders/1lV6E9D-3IVZMY79acSRbVp66HQSs2gqC?usp=drive_link)|
 |MSCOCO-5K |Swin-384 | 74.7 | 88.4  | 70.3 | 93.8 | 519.1 |[Link](https://drive.google.com/drive/folders/1x-szyZmRFPHatwoUk9x-mQU5NWf7SVc3?usp=drive_link)|
 
+
+
+
+## Citation
+
+If you find SEPS useful in your research, please consider citing our paper. The official ICML/PMLR BibTeX will be updated once available.
+
+```bibtex
+@misc{mao2026seps,
+  title  = {SEPS: Semantic-Enhanced Patch Slimming Framework for Fine-Grained Cross-Modal Alignment},
+  author = {Mao, Xinyu and Li, Junsi and Zhang, Haoji and Liang, Yu and Sun, Ming},
+  year   = {2026},
+  note   = {Accepted to ICML 2026},
+  url    = {https://arxiv.org/abs/2511.01390}
+}
+```
 
