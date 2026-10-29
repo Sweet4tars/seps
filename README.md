@@ -4,7 +4,7 @@
 
 <p>
   <a href="https://arxiv.org/abs/2511.01390"><img src="https://img.shields.io/badge/arXiv-2511.01390-b31b1b.svg" alt="arXiv"></a>
-  <img src="https://img.shields.io/badge/ICML-2026-4b44ce.svg" alt="ICML 2026">
+  <a href="https://proceedings.mlr.press/v306/mao26d.html"><img src="https://img.shields.io/badge/ICML-2026-4b44ce.svg" alt="ICML 2026"></a>
   <img src="https://img.shields.io/badge/Task-Image--Text%20Retrieval-0ea5e9.svg" alt="Image-Text Retrieval">
   <img src="https://img.shields.io/badge/Framework-PyTorch-ee4c2c.svg" alt="PyTorch">
 </p>
@@ -15,7 +15,7 @@
 </p>
 
 <p>
-  <a href="https://arxiv.org/abs/2511.01390">Paper</a> ·
+  <a href="https://proceedings.mlr.press/v306/mao26d.html">Paper</a> ·
   <a href="#introduction">Introduction</a> ·
   <a href="#training">Training</a> ·
   <a href="#evaluation">Evaluation</a> ·
@@ -202,15 +202,20 @@ We provide the training logs, checkpoints, performances, and hyper-parameters.
 
 ## Citation
 
-If you find SEPS useful in your research, please consider citing our paper. The official ICML/PMLR BibTeX will be updated once available.
+If you find SEPS useful in your research, please consider citing our [ICML 2026 paper published in PMLR](https://proceedings.mlr.press/v306/mao26d.html).
 
 ```bibtex
-@misc{mao2026seps,
-  title  = {SEPS: Semantic-Enhanced Patch Slimming Framework for Fine-Grained Cross-Modal Alignment},
-  author = {Mao, Xinyu and Li, Junsi and Zhang, Haoji and Liang, Yu and Sun, Ming},
-  year   = {2026},
-  note   = {Accepted to ICML 2026},
-  url    = {https://arxiv.org/abs/2511.01390}
+@InProceedings{pmlr-v306-mao26d,
+  title     = {{SEPS}: Semantic-Enhanced Patch Slimming Framework for Fine-Grained Cross-Modal Alignment},
+  author    = {Mao, Xinyu and Li, Junsi and Zhang, Haoji and Liang, Yu and Sun, Ming},
+  booktitle = {Proceedings of the 43rd International Conference on Machine Learning},
+  pages     = {86448--86457},
+  year      = {2026},
+  volume    = {306},
+  series    = {Proceedings of Machine Learning Research},
+  publisher = {PMLR},
+  pdf       = {https://raw.githubusercontent.com/mlresearch/v306/main/assets/mao26d/mao26d.pdf},
+  url       = {https://proceedings.mlr.press/v306/mao26d.html}
 }
 ```
 
