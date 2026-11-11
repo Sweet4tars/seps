@@ -74,7 +74,8 @@ class RawImageDataset(data.Dataset):
                     except json.JSONDecodeError as e:
                         print(f"Error parsing line: {e}")
 
-        if self.split == 'test' or (self.split == 'testall' and opt.dataset == 'coco'):
+        # Align each image-level dense caption with its five caption entries.
+        if self.split == 'train' or self.split == 'test' or (self.split == 'testall' and opt.dataset == 'coco'):
             self.long_captions = [cap for cap in self.long_captions for _ in range(5)] 
 
         # Get the image ids
@@ -101,7 +102,7 @@ class RawImageDataset(data.Dataset):
         # Convert caption (string) to word ids (with Size Augmentation at training time).
         target = process_caption_bert(self.tokenizer, caption_tokens, self.train, size_augment=self.opt.size_augment)
        
-        long_caption = self.long_captions[img_index]
+        long_caption = self.long_captions[index]
         long_caption_tokens = self.tokenizer.basic_tokenizer.tokenize(long_caption)  
         long_target = process_caption_bert(self.tokenizer, long_caption_tokens, self.train, size_augment=self.opt.size_augment) 
 

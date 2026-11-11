@@ -180,9 +180,9 @@ python eval.py --dataset coco --data_path data/ --gpu-id 1
 
 ## Performances
 The following tables show the reproducing results of cross-modal retrieval on **MSCOCO** and **Flickr30K** datasets. 
-We provide the training logs, checkpoints, performances, and hyper-parameters.
+We provide the training logs, evaluation results, and hyper-parameters. Trained SEPS checkpoints are no longer distributed through these links.
 
-|Datasets| Visual encoders |I2T R@1|I2T R@5|T2I R@1|T2I R@5| rSum | Model checkpoint and train log|
+|Datasets| Visual encoders |I2T R@1|I2T R@5|T2I R@1|T2I R@5| rSum | Train and evaluation logs|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |Flickr30K |ViT-224 | 86.1 | 93.7  | 86.9 | 98.1 | 560.9 |[Link](https://drive.google.com/drive/folders/1muHqWyKgzyDQ4fqSo5QgRPtXLTJEVdbZ?usp=drive_link)|
 |Flickr30K |ViT-384 | 90.7 | 94.4  | 89.3 | 99.3 | 571.5 |[Link](https://drive.google.com/drive/folders/1iUVqFBj1odFvrAjxyF_QNgpw-DDf-Za_?usp=drive_link)|
